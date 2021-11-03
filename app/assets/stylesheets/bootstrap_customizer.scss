@@ -1,0 +1,9 @@
+  @import "bootstrap/functions";
+  @import "bootstrap/variables";
+  $theme-colors: map-merge(
+    (
+      "primary": #15879b,
+      "light-grey": rgb(249, 250, 251),
+    ),
+    $theme-colors
+  );

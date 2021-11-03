@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<table id="ordersTable" class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Item sku</th>
+      <th>Purchase date</th>
+      <th>Platform order num</th>
+      <th>Sales channel</th>
+      <th>Customer name</th>
+      <th>Customer state</th>
+      <th>Shipped at</th>
+      <th>Num items shipped</th>
+      <th>Payment method</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.price %></td>
+        <td><%= order.item_sku %></td>
+        <td><%= order.purchase_date %></td>
+        <td><%= order.platform_order_num %></td>
+        <td><%= order.sales_channel %></td>
+        <td><%= order.customer_name %></td>
+        <td><%= order.customer_state %></td>
+        <td><%= order.shipped_at %></td>
+        <td><%= order.num_items_shipped %></td>
+        <td><%= order.payment_method %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+  $(document).ready(function () {
+   var oTable = $("#ordersTable").DataTable({})
+  });
+</script>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

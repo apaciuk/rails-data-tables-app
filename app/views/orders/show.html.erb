@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @order.price %>
+</p>
+
+<p>
+  <strong>Item sku:</strong>
+  <%= @order.item_sku %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @order.purchase_date %>
+</p>
+
+<p>
+  <strong>Platform order num:</strong>
+  <%= @order.platform_order_num %>
+</p>
+
+<p>
+  <strong>Sales channel:</strong>
+  <%= @order.sales_channel %>
+</p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @order.customer_name %>
+</p>
+
+<p>
+  <strong>Customer state:</strong>
+  <%= @order.customer_state %>
+</p>
+
+<p>
+  <strong>Shipped at:</strong>
+  <%= @order.shipped_at %>
+</p>
+
+<p>
+  <strong>Num items shipped:</strong>
+  <%= @order.num_items_shipped %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @order.payment_method %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
